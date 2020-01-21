@@ -16,9 +16,9 @@ podTemplate(containers: [
                         mvn clean install
                     """
                 }
-                stage('Test') {
+                stage('Sonar') {
                     sh """
-                        mvn clean install
+                        mvn verify sonar:sonar
                     """
                 }
             }
